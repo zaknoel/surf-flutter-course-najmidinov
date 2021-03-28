@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyFirstWidget(),
+      home: MyFirstWidgetSF(),
     );
   }
 }
@@ -113,6 +113,25 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class MyFirstWidget extends StatelessWidget {
+  int counter = 0;
+  @override
+  Widget build(BuildContext context) {
+    counter++;
+    print(counter);
+    return Container(
+      child: Center(
+        child: Text("Hello!"),
+      ),
+    );
+  }
+}
+
+class MyFirstWidgetSF extends StatefulWidget {
+  @override
+  _MyFirstWidgetSFState createState() => _MyFirstWidgetSFState();
+}
+
+class _MyFirstWidgetSFState extends State<MyFirstWidgetSF> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
