@@ -4,6 +4,16 @@ void main() {
   runApp(MyApp());
 }
 
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyFirstWidget(),
+      title: "Test title",
+    );
+  }
+}
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
