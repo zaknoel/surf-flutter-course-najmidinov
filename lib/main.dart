@@ -124,6 +124,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class MyFirstWidget extends StatelessWidget {
   int counter = 0;
+  getContext() {
+    //return context.runtimeType;
+  }
+
   @override
   Widget build(BuildContext context) {
     counter++;
@@ -143,6 +147,10 @@ class MyFirstWidgetSF extends StatefulWidget {
 
 class _MyFirstWidgetSFState extends State<MyFirstWidgetSF> {
   int counter = 0;
+  getContext() {
+    return context.runtimeType;
+  }
+
   @override
   Widget build(BuildContext context) {
     counter++;
