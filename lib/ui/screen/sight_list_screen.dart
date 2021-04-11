@@ -8,6 +8,10 @@ const TextStyle kTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
 );
 
+
+const kGreenColor = Color(0xff4CAF50);
+const kYellowColor = Color(0xffFCDD3D);
+
 class SightListScreen extends StatefulWidget {
   SightListScreen({Key key}) : super(key: key);
 
@@ -22,10 +26,13 @@ class _SightListScreenState extends State<SightListScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: 150,
-        title: const Text(
-          "Список\nинтересных мест",
-          style: kTextStyle,
-          textAlign: TextAlign.start,
+        title: RichText(
+          text: TextSpan(style: kTextStyle, children: [
+            TextSpan(text: 'С', style: TextStyle(color: kGreenColor)),
+            TextSpan(text: 'писок\n'),
+            TextSpan(text: 'и', style: TextStyle(color: kYellowColor)),
+            TextSpan(text: 'нтересных мест')
+          ]),
         ),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
