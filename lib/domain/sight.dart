@@ -6,6 +6,7 @@ class Sight {
   String url; //путь до фотографии в интернете
   String details; //описание достопримечательности
   Types type; //тип достопримечательности.
+
   Sight({this.name, this.location, this.url, this.details, this.type});
 }
 
@@ -18,3 +19,12 @@ class Location {
 
 //enum for types of interesting places
 enum Types { city, museum, park, waterfall, mountain }
+
+//names for types
+Map<Types, String> typeNames = {
+  Types.city: "Город",
+  Types.museum: "музей",
+  Types.park: "Парк",
+  Types.waterfall: "Водопад",
+  Types.mountain: "Горы",
+};
