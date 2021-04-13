@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
-
-const TextStyle kTextStyle = TextStyle(
-  color: Colors.black,
-  fontSize: 32,
-  fontStyle: FontStyle.normal,
-  fontFamily: "Roboto",
-  fontWeight: FontWeight.w700,
-);
-
-
-const kGreenColor = Color(0xff4CAF50);
-const kYellowColor = Color(0xffFCDD3D);
+import 'package:places/functions/constants.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/screen/sight_card.dart';
 
 class SightListScreen extends StatefulWidget {
   SightListScreen({Key key}) : super(key: key);
@@ -23,6 +14,7 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: 150,
@@ -37,7 +29,13 @@ class _SightListScreenState extends State<SightListScreen> {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child:
+              Column(children: mocks.map((item) => SightCard(item)).toList()),
+        ),
+      ),
     );
   }
 }
