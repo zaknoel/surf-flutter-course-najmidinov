@@ -36,6 +36,7 @@ const kTypeStype = TextStyle(
   color: Colors.white,
 );
 
+
 const TextStyle kDetailTitle = TextStyle(
   fontFamily: 'Roboto',
   fontWeight: FontWeight.w700,
@@ -51,3 +52,4 @@ const kDetailType = TextStyle(
   fontSize: 14,
   color: Color(0xff3B3E5B),
 );
+

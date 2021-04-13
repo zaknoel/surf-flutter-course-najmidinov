@@ -20,6 +20,7 @@ class Location {
 //enum for types of interesting places
 enum Types { city, museum, park, waterfall, mountain }
 
+
 //names for types
 Map<Types, String> typeNames = {
   Types.city: "Город",
@@ -28,3 +29,4 @@ Map<Types, String> typeNames = {
   Types.waterfall: "Водопад",
   Types.mountain: "Горы",
 };
+
