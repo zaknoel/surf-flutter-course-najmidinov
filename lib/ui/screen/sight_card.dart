@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/functions/constants.dart';
+import 'package:places/functions/styles.dart';
 
 class SightCard extends StatelessWidget {
   final Sight item;
@@ -28,7 +29,7 @@ class SightCard extends StatelessWidget {
                 Positioned(
                   top: 16,
                   left: 16,
-                  child: Text(typeNames[item.type], style: kTypeStype),
+                  child: Text(typeNames[item.type], style: listPlaceTypeStyle),
                 ),
                 Positioned(
                   top: 19,
@@ -64,7 +65,7 @@ class SightCard extends StatelessWidget {
                   Text(
                     item.name,
                     maxLines: 2,
-                    style: kTitleStyle,
+                    style: listTitleStyle,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                   ),
@@ -74,7 +75,7 @@ class SightCard extends StatelessWidget {
                   Text(
                     item.details,
                     maxLines: 1,
-                    style: kDescStyle,
+                    style: listDescStyle,
                     overflow: TextOverflow.ellipsis,
                   )
                 ],

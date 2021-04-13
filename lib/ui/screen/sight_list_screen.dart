@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/functions/constants.dart';
+import 'package:places/functions/styles.dart';
 import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
@@ -19,7 +20,7 @@ class _SightListScreenState extends State<SightListScreen> {
         automaticallyImplyLeading: false,
         toolbarHeight: 150,
         title: RichText(
-          text: TextSpan(style: kTextStyle, children: [
+          text: TextSpan(style: listHeadStyle, children: [
             TextSpan(text: 'С', style: TextStyle(color: kGreenColor)),
             TextSpan(text: 'писок\n'),
             TextSpan(text: 'и', style: TextStyle(color: kYellowColor)),
