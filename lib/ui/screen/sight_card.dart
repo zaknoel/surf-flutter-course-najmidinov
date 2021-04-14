@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/functions/constants.dart';
 import 'package:places/functions/styles.dart';
+import 'package:places/ui/components/image_loader.dart';
 
 class SightCard extends StatelessWidget {
   final Sight item;
@@ -36,28 +37,7 @@ class SightCard extends StatelessWidget {
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       ),
-                      child: Image.network(
-                        item.url,
-                        fit: BoxFit.cover,
-                        loadingBuilder: (context, child, loadingProgress) {
-                          if (loadingProgress == null) return child;
-
-                          return Center(
-                            child: CircularProgressIndicator(
-                              backgroundColor: kYellowColor,
-                              strokeWidth: 5.0,
-                              valueColor: AlwaysStoppedAnimation(kGreenColor),
-                              value: loadingProgress.expectedTotalBytes != null
-                                  ? loadingProgress.cumulativeBytesLoaded /
-                                      loadingProgress.expectedTotalBytes
-                                  : null,
-                            ),
-                          );
-                          // You can use LinearProgressIndicator or CircularProgressIndicator instead
-                        },
-                        errorBuilder: (context, error, stackTrace) =>
-                            Center(child: Text('Cannot load image, sorry!')),
-                      ),
+                      child: ImageLoader(item.url),
                     ),
                   ),
                   Positioned(
