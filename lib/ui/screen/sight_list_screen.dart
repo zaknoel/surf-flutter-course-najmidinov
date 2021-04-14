@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/functions/constants.dart';
-import 'package:places/functions/styles.dart';
 import 'package:places/mocks.dart';
 import 'package:places/ui/components/custom_appbar.dart';
 import 'package:places/ui/screen/sight_card.dart';

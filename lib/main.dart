@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/screen/sight_details.dart';
+//import 'package:places/ui/screen/sight_details.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+/*
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -105,8 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-class MyFirstWidget extends StatelessWidget {
+*/
+/*class MyFirstWidget extends StatelessWidget {
   int counter = 0;
   getContext() {
     //return context.runtimeType;
@@ -146,3 +146,4 @@ class _MyFirstWidgetSFState extends State<MyFirstWidgetSF> {
     );
   }
 }
+*/
