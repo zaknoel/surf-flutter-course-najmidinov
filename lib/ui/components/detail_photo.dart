@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DetailPhoto extends StatelessWidget {
+  const DetailPhoto();
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -15,7 +16,7 @@ class DetailPhoto extends StatelessWidget {
           child: Container(
             height: 32,
             width: 32,
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios_outlined,
               size: 14,
             ),

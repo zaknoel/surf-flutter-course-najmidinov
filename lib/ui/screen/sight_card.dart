@@ -65,7 +65,7 @@ class SightCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Text(
                       item.name,
                       maxLines: 2,
@@ -73,7 +73,7 @@ class SightCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(
@@ -82,7 +82,7 @@ class SightCard extends StatelessWidget {
                       style: listDescStyle,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),

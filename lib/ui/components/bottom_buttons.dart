@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/functions/styles.dart';
 
 class BottomButtons extends StatelessWidget {
+  const BottomButtons();
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,7 +18,7 @@ class BottomButtons extends StatelessWidget {
                 width: 22,
                 color: Colors.red,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 9,
               ),
               Text(
@@ -37,7 +38,7 @@ class BottomButtons extends StatelessWidget {
                 width: 22,
                 color: Colors.red,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 9,
               ),
               Text(

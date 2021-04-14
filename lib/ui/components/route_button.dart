@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/functions/styles.dart';
 
 class RouteButton extends StatelessWidget {
+  const RouteButton();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +22,7 @@ class RouteButton extends StatelessWidget {
             width: 15,
             color: Colors.red,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Text(
