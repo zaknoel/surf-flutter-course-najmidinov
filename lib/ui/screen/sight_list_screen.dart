@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/functions/constants.dart';
 import 'package:places/functions/styles.dart';
 import 'package:places/mocks.dart';
+import 'package:places/ui/components/custom_appbar.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
 class SightListScreen extends StatefulWidget {
@@ -16,20 +17,7 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        toolbarHeight: 150,
-        title: RichText(
-          text: TextSpan(style: listHeadStyle, children: [
-            TextSpan(text: 'С', style: TextStyle(color: kGreenColor)),
-            TextSpan(text: 'писок\n'),
-            TextSpan(text: 'и', style: TextStyle(color: kYellowColor)),
-            TextSpan(text: 'нтересных мест')
-          ]),
-        ),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0,
-      ),
+      appBar: const MyCustomAppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),

@@ -17,7 +17,7 @@ class _SightDetailsState extends State<SightDetails> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DetailPhoto(),
+            const DetailPhoto(),
             Container(
               padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
               child: Column(
@@ -27,7 +27,7 @@ class _SightDetailsState extends State<SightDetails> {
                     'Пряности и радости',
                     style: detailTitleStyle,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 2,
                   ),
                   Row(
@@ -44,7 +44,7 @@ class _SightDetailsState extends State<SightDetails> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   Text(
@@ -53,15 +53,15 @@ class _SightDetailsState extends State<SightDetails> {
                       color: Color(0xff3B3E5B),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   RouteButton(),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  Divider(),
-                  SizedBox(
+                  const Divider(),
+                  const SizedBox(
                     height: 8,
                   ),
                   BottomButtons()
