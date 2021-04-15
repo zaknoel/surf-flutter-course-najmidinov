@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
+import 'package:places/ui/components/bottom_nav.dart';
 import 'package:places/ui/components/custom_appbar.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
@@ -16,6 +17,7 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const MyCustomAppBar(),
+      bottomNavigationBar: const BottomNavBar(selectedIndex: 0),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
