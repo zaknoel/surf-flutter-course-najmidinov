@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:places/functions/constants.dart';
+import 'package:places/ui/components/image_loader.dart';
 
 class DetailPhoto extends StatelessWidget {
   const DetailPhoto();
@@ -8,7 +10,9 @@ class DetailPhoto extends StatelessWidget {
       children: [
         Container(
           height: 360,
-          color: Colors.teal[700], //image
+          color: kGreyColor, //image
+          child: ImageLoader(
+              'https://www.inexhibit.com/wp-content/uploads/2014/04/British-Museum-London-exterior-870x580.jpg'),
         ),
         Positioned(
           top: 36,
