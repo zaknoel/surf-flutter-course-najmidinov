@@ -39,3 +39,7 @@ TextStyle detailPlaceTypeStyle = commonStyle.copyWith(
   fontWeight: FontWeight.w700,
   color: Color(0xff3B3E5B),
 );
+
+///favourite screen
+TextStyle favTitle = commonStyle.copyWith(
+    fontWeight: FontWeight.w500, fontSize: 18, color: Color(0xFF252849));
