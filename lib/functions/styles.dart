@@ -5,8 +5,8 @@ const TextStyle commonStyle = TextStyle(
   fontFamily: "Roboto",
   fontWeight: FontWeight.w400,
   fontSize: 14,
-  color: Colors.black,
 );
+
 //list
 TextStyle listHeadStyle = commonStyle.copyWith(
   fontWeight: FontWeight.w700,
@@ -17,7 +17,6 @@ TextStyle listTitleStyle = commonStyle.copyWith(
   fontWeight: FontWeight.w500,
   fontSize: 16,
   height: 1.3,
-  color: Color(0xff3B3E5B),
 );
 
 TextStyle listDescStyle = commonStyle.copyWith(
@@ -42,4 +41,6 @@ TextStyle detailPlaceTypeStyle = commonStyle.copyWith(
 
 ///favourite screen
 TextStyle favTitle = commonStyle.copyWith(
-    fontWeight: FontWeight.w500, fontSize: 18, color: Color(0xFF252849));
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+);

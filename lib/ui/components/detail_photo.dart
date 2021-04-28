@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/functions/constants.dart';
+
 import 'package:places/ui/components/image_loader.dart';
 
 class DetailPhoto extends StatelessWidget {
@@ -10,7 +10,7 @@ class DetailPhoto extends StatelessWidget {
       children: [
         Container(
           height: 360,
-          color: kGreyColor, //image
+          color: Theme.of(context).cardColor, //image
           child: ImageLoader(
               'https://www.inexhibit.com/wp-content/uploads/2014/04/British-Museum-London-exterior-870x580.jpg'),
         ),
@@ -24,7 +24,7 @@ class DetailPhoto extends StatelessWidget {
               Icons.arrow_back_ios_outlined,
               size: 14,
             ),
-            color: Colors.white,
+            color: Theme.of(context).scaffoldBackgroundColor,
           ),
         )
       ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/functions/constants.dart';
+
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/image_loader.dart';
 
@@ -13,89 +13,67 @@ class SightCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 3 / 2,
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 16),
-        height: 188,
+        margin: EdgeInsets.only(bottom: 24),
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: Column(
           children: [
-            Container(
-              height: 96,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                border: Border.all(color: kGreyColor),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                //color: Colors.red[300],
-              ),
-              child: Stack(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
+            Expanded(
+              flex: 1,
+              child: Container(
+                height: 96,
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ImageLoader(item.url),
+                    Positioned(
+                      top: 16,
+                      left: 16,
+                      child: Text(
+                        typeNames[item.type],
+                        style: listPlaceTypeStyle,
                       ),
-                      child: ImageLoader(item.url),
                     ),
-                  ),
-                  Positioned(
-                    top: 16,
-                    left: 16,
-                    child:
-                        Text(typeNames[item.type], style: listPlaceTypeStyle),
-                  ),
-                  Positioned(
-                    top: 19,
-                    right: 18,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
+                    Positioned(
+                      top: 22,
+                      right: 22,
+                      child: Container(
+                        height: 22,
+                        width: 22,
                         color: Colors.red,
                       ),
-                      height: 18,
-                      width: 20,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                border: Border.all(color: kGreyColor),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: kGreyColor,
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.all(16),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 16),
                     Text(
                       item.name,
+                      style: Theme.of(context).textTheme.subtitle1,
                       maxLines: 2,
-                      style: listTitleStyle,
                       overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.left,
                     ),
                     const SizedBox(
                       height: 2,
                     ),
                     Text(
                       item.details,
-                      maxLines: 1,
                       style: listDescStyle,
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 16),
+                    )
                   ],
                 ),
               ),

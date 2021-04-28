@@ -25,22 +25,23 @@ class _SightDetailsState extends State<SightDetails> {
                 children: [
                   Text(
                     'Пряности и радости',
-                    style: detailTitleStyle,
+                    style: Theme.of(context).textTheme.subtitle2,
                   ),
                   const SizedBox(
                     height: 2,
                   ),
                   Row(
                     children: [
-                      Text('ресторан', style: detailPlaceTypeStyle),
+                      Text('ресторан',
+                          style: Theme.of(context).textTheme.headline4),
                       SizedBox(
                         width: 16,
                       ),
                       Text(
                         'закрыто до 09:00',
                         style: detailPlaceTypeStyle.copyWith(
-                          color: Color(0xff7C7E92),
-                        ),
+                            color: Color(0xff7C7E92),
+                            fontWeight: FontWeight.w400),
                       )
                     ],
                   ),
@@ -49,9 +50,7 @@ class _SightDetailsState extends State<SightDetails> {
                   ),
                   Text(
                     'Пряный вкус радостной жизни вместе с шеф-поваром Изо Дзандзава, благодаря которой у гостей ресторана есть возможность выбирать из двух направлений: европейского и восточного',
-                    style: detailPlaceTypeStyle.copyWith(
-                      color: Color(0xff3B3E5B),
-                    ),
+                    style: Theme.of(context).textTheme.headline5,
                   ),
                   const SizedBox(
                     height: 24,

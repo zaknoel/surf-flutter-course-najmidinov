@@ -9,12 +9,15 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       padding: const EdgeInsets.only(top: 64, left: 16, right: 16),
       child: RichText(
-        text: TextSpan(style: listHeadStyle, children: [
-          TextSpan(text: 'С', style: TextStyle(color: kGreenColor)),
-          TextSpan(text: 'писок\n'),
-          TextSpan(text: 'и', style: TextStyle(color: kYellowColor)),
-          TextSpan(text: 'нтересных мест')
-        ]),
+        text: TextSpan(
+            style: listHeadStyle.copyWith(
+                color: Theme.of(context).appBarTheme.textTheme.headline1.color),
+            children: [
+              TextSpan(text: 'С', style: TextStyle(color: kGreenColor)),
+              TextSpan(text: 'писок\n'),
+              TextSpan(text: 'и', style: TextStyle(color: kYellowColor)),
+              TextSpan(text: 'нтересных мест')
+            ]),
       ),
     );
   }

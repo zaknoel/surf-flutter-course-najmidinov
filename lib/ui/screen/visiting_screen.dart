@@ -15,13 +15,11 @@ class VisitingScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'Избранное',
-            style: favTitle,
+            style: TextStyle(
+                color: Theme.of(context).appBarTheme.textTheme.headline1.color),
           ),
           automaticallyImplyLeading: false,
-          elevation: 0,
           toolbarHeight: 132,
-          centerTitle: true,
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(52),
             child: Padding(
@@ -29,19 +27,10 @@ class VisitingScreen extends StatelessWidget {
               child: Container(
                 height: 40,
                 decoration: BoxDecoration(
-                  //color: Colors.red,
                   borderRadius: BorderRadius.circular(40),
-                  color: Color(0xffF5F5F5),
+                  color: Theme.of(context).cardColor,
                 ),
                 child: TabBar(
-                  indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      40,
-                    ),
-                    color: Color(0xff3B3E5B),
-                  ),
-                  labelColor: Colors.white,
-                  unselectedLabelColor: Color(0xff7C7E928F),
                   tabs: [
                     Tab(text: 'Хочу посетит'),
                     Tab(text: 'Посетил'),
