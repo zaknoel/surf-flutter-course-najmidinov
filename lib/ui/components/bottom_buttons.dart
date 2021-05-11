@@ -23,8 +23,9 @@ class BottomButtons extends StatelessWidget {
               ),
               Text(
                 'Запланировать',
-                style:
-                    detailPlaceTypeStyle.copyWith(color: Color(0xff7C7E9256)),
+                style: detailPlaceTypeStyle.copyWith(
+                    color: Theme.of(context).canvasColor,
+                    fontWeight: FontWeight.normal),
               ),
             ],
           ),
@@ -44,8 +45,8 @@ class BottomButtons extends StatelessWidget {
               Text(
                 'В Избранное',
                 style: detailPlaceTypeStyle.copyWith(
-                  color: Color(0xff3B3E5B),
-                ),
+                    color: Theme.of(context).secondaryHeaderColor,
+                    fontWeight: FontWeight.normal),
               ),
             ],
           ),

@@ -6,16 +6,24 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: selectedIndex,
-      selectedItemColor: Color(0xff252849),
-      items: [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.list), label: 'Список интересных мест'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Хочу посетить /Посещенные места'),
-      ],
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Theme.of(context).canvasColor,
+          ),
+        ],
+      ),
+      child: BottomNavigationBar(
+        currentIndex: selectedIndex,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.list), label: 'Список интересных мест'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Хочу посетить /Посещенные места'),
+        ],
+      ),
     );
   }
 }

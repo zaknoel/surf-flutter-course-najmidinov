@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/functions/constants.dart';
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/image_loader.dart';
 
@@ -13,9 +12,10 @@ class FavSightCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 3 / 2,
       child: Container(
+        margin: EdgeInsets.only(bottom: 24),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          color: kGreyColor,
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -70,7 +70,7 @@ class FavSightCard extends StatelessWidget {
                   children: [
                     Text(
                       'Пряности и радости ',
-                      style: listTitleStyle,
+                      style: Theme.of(context).textTheme.subtitle1,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),

@@ -15,12 +15,11 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: const MyCustomAppBar(),
       bottomNavigationBar: const BottomNavBar(selectedIndex: 0),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child:
               Column(children: mocks.map((item) => SightCard(item)).toList()),
         ),
