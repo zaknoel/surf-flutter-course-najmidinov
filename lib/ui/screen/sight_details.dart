@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/bottom_buttons.dart';
+import 'package:places/ui/components/bottom_nav.dart';
 import 'package:places/ui/components/detail_photo.dart';
 import 'package:places/ui/components/route_button.dart';
 
@@ -13,6 +14,7 @@ class _SightDetailsState extends State<SightDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavBar(selectedIndex: 0),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(

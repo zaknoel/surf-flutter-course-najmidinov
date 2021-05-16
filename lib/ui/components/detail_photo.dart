@@ -17,14 +17,21 @@ class DetailPhoto extends StatelessWidget {
         Positioned(
           top: 36,
           left: 16,
-          child: Container(
-            height: 32,
-            width: 32,
-            child: const Icon(
+          height: 32,
+          width: 32,
+          child: TextButton(
+            onPressed: () {
+              print('Back button clicked');
+            },
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+                  Theme.of(context).scaffoldBackgroundColor),
+            ),
+            child: Icon(
               Icons.arrow_back_ios_outlined,
               size: 14,
+              color: Theme.of(context).secondaryHeaderColor,
             ),
-            color: Theme.of(context).scaffoldBackgroundColor,
           ),
         )
       ],
