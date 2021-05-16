@@ -44,3 +44,7 @@ TextStyle favTitle = commonStyle.copyWith(
   fontWeight: FontWeight.w500,
   fontSize: 18,
 );
+
+ButtonStyle noOverlayStyle = ButtonStyle(
+  overlayColor: MaterialStateProperty.all(Colors.transparent),
+);

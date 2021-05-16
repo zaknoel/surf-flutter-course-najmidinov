@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/image_loader.dart';
+import 'package:places/ui/components/svg_loader.dart';
 
 class FavSightCard extends StatelessWidget {
   const FavSightCard({
@@ -40,19 +41,27 @@ class FavSightCard extends StatelessWidget {
                     Positioned(
                       top: 22,
                       right: 22,
-                      child: Container(
-                        height: 22,
-                        width: 22,
-                        color: Colors.red,
+                      height: 22,
+                      width: 22,
+                      child: TextButton(
+                        onPressed: () {
+                          print('Delete Button clicked');
+                        },
+                        style: noOverlayStyle,
+                        child: svgLoader('delete', 'Delete'),
                       ),
                     ),
                     Positioned(
                       top: 22,
                       right: 57,
-                      child: Container(
-                        height: 22,
-                        width: 22,
-                        color: Colors.red,
+                      height: 19,
+                      width: 23,
+                      child: TextButton(
+                        onPressed: () {
+                          print('calendar btn clicked');
+                        },
+                        style: noOverlayStyle,
+                        child: svgLoader('calendar', 'Plan'),
                       ),
                     ),
                   ],

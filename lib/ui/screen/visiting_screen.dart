@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/bottom_nav.dart';
 import 'package:places/ui/components/fav_sight_card.dart';
+import 'package:places/ui/components/svg_loader.dart';
 
 class VisitingScreen extends StatelessWidget {
   const VisitingScreen({Key key}) : super(key: key);
@@ -46,7 +47,7 @@ class VisitingScreen extends StatelessWidget {
             EmptyTab(),
           ],
         ),
-        bottomNavigationBar: const BottomNavBar(selectedIndex: 1),
+        bottomNavigationBar: const BottomNavBar(selectedIndex: 2),
       ),
     );
   }
@@ -66,11 +67,7 @@ class EmptyTab extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Icon(
-            Icons.photo_camera,
-            color: Color(0xff7C7E928F),
-            size: 50,
-          ),
+          svgLoader('big_route', 'Empty', Color(0xff7C7E928F)),
           const SizedBox(
             height: 16,
           ),

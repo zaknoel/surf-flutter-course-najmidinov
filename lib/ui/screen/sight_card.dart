@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/domain/sight.dart';
 
 import 'package:places/functions/styles.dart';
 import 'package:places/ui/components/image_loader.dart';
+import 'package:places/ui/components/svg_loader.dart';
 
 class SightCard extends StatelessWidget {
   final Sight item;
@@ -40,10 +42,14 @@ class SightCard extends StatelessWidget {
                     Positioned(
                       top: 22,
                       right: 22,
-                      child: Container(
-                        height: 22,
-                        width: 22,
-                        color: Colors.red,
+                      width: 20,
+                      height: 18,
+                      child: TextButton(
+                        onPressed: () {
+                          print('Heart button clicked');
+                        },
+                        style: noOverlayStyle,
+                        child: svgLoader('heart_org', 'Add to Wishlist'),
                       ),
                     ),
                   ],
